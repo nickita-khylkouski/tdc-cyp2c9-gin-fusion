@@ -109,6 +109,7 @@ This package is structured for TDC leaderboard submission, but the repository it
 
 ## Benchmark links
 
+- GitHub repository: <https://github.com/nickita-khylkouski/tdc-cyp2c9-gin-fusion>
 - TDC leaderboard guide: <https://tdcommons.ai/benchmark/overview/>
 - TDC `CYP2C9_Veith` leaderboard: <https://tdcommons.ai/benchmark/admet_group/10cyp2c9i/>
 

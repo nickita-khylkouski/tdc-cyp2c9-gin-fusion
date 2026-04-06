@@ -24,6 +24,10 @@ Hybrid CYP2C9 inhibitor classifier using `exact-MapLight 1024` chemical features
 
 - NVIDIA H100 GPUs
 
+## Code link
+
+- <https://github.com/nickita-khylkouski/tdc-cyp2c9-gin-fusion>
+
 ## Benchmark links
 
 - TDC overview: <https://tdcommons.ai/benchmark/overview/>
