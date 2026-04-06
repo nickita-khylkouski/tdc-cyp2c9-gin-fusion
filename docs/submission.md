@@ -33,3 +33,7 @@ Hybrid CYP2C9 inhibitor classifier using `exact-MapLight 1024` chemical features
 - TDC overview: <https://tdcommons.ai/benchmark/overview/>
 - CYP2C9_Veith leaderboard: <https://tdcommons.ai/benchmark/admet_group/10cyp2c9i/>
 - submission form: <https://forms.gle/HYupGaV7WDuutbr9A>
+
+## Paste-ready answers
+
+Use [`form_answers.md`](form_answers.md) as the copy-paste source for the Google Form.

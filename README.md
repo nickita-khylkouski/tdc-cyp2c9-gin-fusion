@@ -1,10 +1,22 @@
 # TDC CYP2C9 GIN Fusion
 
-Hybrid CYP2C9 inhibition benchmark submission for TDC built from:
+Frozen public release for a `TDC.CYP2C9_Veith` benchmark submission based on descriptor-graph fusion.
 
-- `exact-MapLight 1024` chemistry features
-- pretrained `gin_supervised_masking` graph embeddings from DGL-LifeSci
-- a `CatBoost` fusion head
+## Abstract
+
+This repository packages a frozen five-run benchmark result for `TDC.CYP2C9_Veith`, a scaffold-split molecular classification task evaluated with `AUPRC`. The model combines an `exact-MapLight 1024` chemistry feature block with pretrained `gin_supervised_masking` graph embeddings from DGL-LifeSci and a `CatBoost` fusion head. The goal of this release is reproducibility and benchmark transparency: it exposes the runner, the preserved configuration, the submission packet, and a concise compliance audit for the released result.
+
+## Model card
+
+| Component | Choice |
+| --- | --- |
+| Chemistry features | `exact-MapLight 1024` |
+| Graph encoder | `gin_supervised_masking` |
+| Fusion head | `CatBoost` |
+| Benchmark | `TDC.CYP2C9_Veith` |
+| Metric | `AUPRC` |
+| Split | `Scaffold` |
+| Runs | `5` |
 
 ## Frozen result
 
@@ -28,7 +40,7 @@ Per-seed test scores:
 
 At the time this run was frozen, that score was effectively tied with the public `#1` row on the TDC `CYP2C9_Veith` leaderboard.
 
-## Method
+## Method summary
 
 The pipeline fuses two complementary signal sources:
 
@@ -37,7 +49,7 @@ The pipeline fuses two complementary signal sources:
 
 Those features are concatenated and scored with a `CatBoost` classifier.
 
-This repository packages the frozen run configuration, the core reproduction scripts, and a submission packet for the benchmark entry.
+The descriptor block and graph embedding block are concatenated and scored with a `CatBoost` classifier. This repository packages the frozen run configuration, the core reproduction scripts, and the benchmark submission materials for that exact configuration.
 
 ## Why this repo exists
 
@@ -106,6 +118,12 @@ See [`requirements.txt`](requirements.txt).
 ## Submission status
 
 This package is structured for TDC leaderboard submission, but the repository itself does not submit anything automatically. The benchmark submission flow is summarized in [`docs/submission.md`](docs/submission.md).
+
+## Notes on scope
+
+- This is a benchmark release, not a claim of a new model architecture.
+- The method is in the same broad family as prior descriptor-plus-graph leaderboard entries, but this repository contains a distinct implementation and a frozen result packet for one exact run family.
+- Later exploratory post-test sweeps are intentionally excluded from this public release.
 
 ## Benchmark links
 
