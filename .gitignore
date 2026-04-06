@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.venv-ginfusion-cu/
+.chem/cache/
+.chem/logs/
+.chem/prepared_gin_gpu/

@@ -1,0 +1,22 @@
+{
+  "benchmark": "CYP2C9_Veith",
+  "metric_name": "auprc",
+  "split_type": "scaffold",
+  "run_name": "cyp_gin_fusion_test_all5_cuda",
+  "method_name": "exact-MapLight 1024 + gin_supervised_masking + CatBoost",
+  "score_mean": 0.8580798922058548,
+  "score_std": 0.001236962051413275,
+  "scores": [
+    0.8580033686993394,
+    0.8586647011725154,
+    0.8578495349256301,
+    0.8560421348549657,
+    0.8598397213768233
+  ],
+  "num_runs": 5,
+  "device": "cuda",
+  "notes": [
+    "Frozen submission candidate promoted from valid before test was observed.",
+    "Public release package reconstructed from preserved experiment logs and config artifacts."
+  ]
+}

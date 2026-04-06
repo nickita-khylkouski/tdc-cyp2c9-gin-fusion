@@ -1,0 +1,42 @@
+{
+  "base_feature_count": 2563,
+  "benchmark": "CYP2C9_Veith",
+  "counts": {
+    "test": 2419,
+    "train": 8463,
+    "valid": 1210
+  },
+  "created_at": "2026-04-06T00:47:03.138531+00:00",
+  "embedding_dim": 300,
+  "embedding_kind": "gin_supervised_masking",
+  "evaluate_split": "test",
+  "feature_set": "maplight_exact",
+  "feature_stats": {
+    "test": {
+      "invalid_smiles": 0,
+      "maplight_avalon_count": 1024,
+      "maplight_erg": 315,
+      "maplight_morgan_count": 1024,
+      "maplight_rdkit": 200
+    },
+    "train": {
+      "invalid_smiles": 0,
+      "maplight_avalon_count": 1024,
+      "maplight_erg": 315,
+      "maplight_morgan_count": 1024,
+      "maplight_rdkit": 200
+    },
+    "valid": {
+      "invalid_smiles": 0,
+      "maplight_avalon_count": 1024,
+      "maplight_erg": 315,
+      "maplight_morgan_count": 1024,
+      "maplight_rdkit": 200
+    }
+  },
+  "fingerprint_bits": 1024,
+  "metric_name": "auprc",
+  "metric_value": 0.8580033686993394,
+  "model": "catboost",
+  "seed": 1
+}

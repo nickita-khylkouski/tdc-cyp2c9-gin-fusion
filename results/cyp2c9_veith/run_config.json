@@ -1,0 +1,17 @@
+{
+  "benchmark": "CYP2C9_Veith",
+  "created_at": "2026-04-06T00:46:24.027570+00:00",
+  "device": "cuda",
+  "embedding_kind": "gin_supervised_masking",
+  "evaluate_split": "test",
+  "feature_set": "maplight_exact",
+  "fingerprint_bits": 1024,
+  "model": "catboost",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}
