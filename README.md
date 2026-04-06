@@ -67,11 +67,15 @@ It is intentionally smaller than the private research workspace that produced it
 - [`scripts/tdc_admet_baseline.py`](scripts/tdc_admet_baseline.py): feature generation, benchmark loading, model utilities
 - [`scripts/tdc_admet_pretrained_gin_fusion.py`](scripts/tdc_admet_pretrained_gin_fusion.py): GIN embedding fusion runner
 - [`scripts/tdc_admet_graph_fusion.py`](scripts/tdc_admet_graph_fusion.py): graph-fusion helper utilities
+- [`scripts/setup_cuda_env.sh`](scripts/setup_cuda_env.sh): reproducible CUDA environment bootstrap
+- [`scripts/run_cyp2c9_submission.sh`](scripts/run_cyp2c9_submission.sh): exact frozen submission command
 - [`results/cyp2c9_veith/frozen_submission_summary.json`](results/cyp2c9_veith/frozen_submission_summary.json): frozen 5-seed submission packet
 - [`results/cyp2c9_veith/run_config.json`](results/cyp2c9_veith/run_config.json): preserved run configuration
 - [`results/cyp2c9_veith/seed_1_metrics.json`](results/cyp2c9_veith/seed_1_metrics.json): sample seed metrics artifact
 - [`docs/submission.md`](docs/submission.md): paste-ready TDC submission notes
 - [`docs/audit.md`](docs/audit.md): compliance and similarity audit
+- [`docs/reproducibility.md`](docs/reproducibility.md): step-by-step reproducibility instructions
+- [`data/README.md`](data/README.md): how to obtain and prepare the benchmark data
 
 ## Reproduction sketch
 
@@ -100,6 +104,13 @@ python scripts/tdc_admet_pretrained_gin_fusion.py \
   --run-name cyp_gin_fusion_test_all5_cuda
 ```
 
+For a cleaner replay path, use:
+
+```bash
+bash scripts/setup_cuda_env.sh .venv
+bash scripts/run_cyp2c9_submission.sh
+```
+
 ## Dependencies
 
 Core dependencies:
@@ -124,6 +135,15 @@ This package is structured for TDC leaderboard submission, but the repository it
 - This is a benchmark release, not a claim of a new model architecture.
 - The method is in the same broad family as prior descriptor-plus-graph leaderboard entries, but this repository contains a distinct implementation and a frozen result packet for one exact run family.
 - Later exploratory post-test sweeps are intentionally excluded from this public release.
+
+## Reproducibility checklist
+
+- exact benchmark specified
+- exact 5-run frozen score packet included
+- code and dependencies published
+- data acquisition documented
+- one-command environment setup script provided
+- one-command frozen submission runner provided
 
 ## Benchmark links
 
